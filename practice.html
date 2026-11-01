@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice | Passco SHS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="practice">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">P</div>
+        <div>
+          <p class="eyebrow">WASSCE</p>
+          <h1>Passco SHS</h1>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="practice.html">Practice</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="ghost-btn" id="themeToggle" aria-label="Toggle color theme">Dark mode</button>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Exam simulator</p>
+          <h2>Practice with clear, wide-view questions</h2>
+        </div>
+      </div>
+
+      <div class="mode-bar" aria-label="Practice modes">
+        <button class="mode-btn active" data-mode="practice">Practice Mode</button>
+        <button class="mode-btn" data-mode="mock">Mock Exam</button>
+      </div>
+
+      <div class="type-bar" aria-label="Question types">
+        <button class="type-btn active" data-type="all" type="button">All Questions</button>
+        <button class="type-btn" data-type="objective" type="button">Objective</button>
+        <button class="type-btn" data-type="theory" type="button">Subjective</button>
+      </div>
+
+      <div class="practice-layout">
+        <section class="panel exam-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Exam Board</p>
+              <h3 id="examTitle">Core Mathematics Practice</h3>
+            </div>
+            <div class="subject-filter">
+              <label for="subjectSelect">Subject</label>
+              <select id="subjectSelect">
+                <option>Core Mathematics</option>
+                <option>English Language</option>
+                <option>Integrated Science</option>
+                <option>Social Studies</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="questionCard" class="question-card" aria-live="polite">
+            <div class="question-meta">
+              <span id="questionTag" class="tag">Objective</span>
+              <span id="questionYear">2024</span>
+              <span id="questionDifficulty">Medium</span>
+            </div>
+            <h4 id="questionPrompt">Question will appear here.</h4>
+            <div id="choices" class="choices"></div>
+            <div id="theoryBox" class="theory-box hidden">
+              <label for="theoryAnswer">Write your answer</label>
+              <textarea id="theoryAnswer" rows="8" placeholder="Explain your reasoning and show working..."></textarea>
+            </div>
+            <div id="answerReveal" class="answer-reveal hidden"></div>
+          </div>
+
+          <div class="action-row">
+            <button class="ghost-btn" id="prevBtn" type="button">Previous</button>
+            <button class="ghost-btn" id="nextBtn" type="button">Next</button>
+            <button class="primary-btn" id="submitBtn" type="button">Check Answer</button>
+          </div>
+        </section>
+
+        <aside class="panel sidebar-panel">
+          <div class="timer-card">
+            <p class="eyebrow">Exam Timer</p>
+            <div id="timer" class="timer">00:45:00</div>
+            <div class="progress-row">
+              <span>Progress</span>
+              <span id="progressText">1 / 5</span>
+            </div>
+            <div class="progress-bar">
+              <span id="progressBar" style="width: 20%"></span>
+            </div>
+          </div>
+
+          <div class="integrity-card">
+            <div class="integrity-head">
+              <p class="eyebrow">Integrity</p>
+              <strong id="integrityBadge">Clean</strong>
+            </div>
+            <div class="meter">
+              <span id="integrityMeter" style="width: 92%"></span>
+            </div>
+            <ul class="integrity-list">
+              <li>Fullscreen lock: Active</li>
+              <li>Tab-switch detection: Monitored</li>
+              <li>Right-click blocked: Enabled</li>
+            </ul>
+          </div>
+
+          <div class="event-card">
+            <p class="eyebrow">Cheating Alerts</p>
+            <ul id="eventList" class="event-list"></ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Passco SHS • Built for Ghanaian SHS learners.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passco SHS | WASSCE Practice & Mock Exams</title>
+    <meta
+      name="description"
+      content="Practice WASSCE-style questions, view performance analytics, and access admin tools for SHS students in Ghana."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="home">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">P</div>
+        <div>
+          <p class="eyebrow">WASSCE</p>
+          <h1>Passco SHS</h1>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="practice.html">Practice</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="ghost-btn" id="themeToggle" aria-label="Toggle color theme">Dark mode</button>
+        <button class="primary-btn student-login-btn" type="button">Student Login</button>
+      </div>
+    </header>
+
+    <main class="landing-main">
+      <section class="welcome-banner">
+        <p>Welcome, student! Your next step to WASSCE success starts here.</p>
+      </section>
+
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="pill">Built for Ghanaian SHS students</span>
+          <h2>Practice smarter for the WASSCE.</h2>
+          <p>
+            Prepare with timed mock exams, instant feedback, topic-level analytics, and
+            exam integrity safeguards that help students stay honest and focused.
+          </p>
+          <div class="cta-row">
+            <a class="primary-btn" href="practice.html">Start Practice</a>
+            <a class="secondary-btn" href="dashboard.html">View Dashboard</a>
+          </div>
+          <ul class="hero-metrics">
+            <li><strong>4</strong><span>core subjects</span></li>
+            <li><strong>12+</strong><span>sample papers</span></li>
+            <li><strong>94%</strong><span>student focus score</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-panel glass-card">
+          <div class="mini-header">
+            <span class="status-dot"></span>
+            <span>Today's readiness</span>
+          </div>
+          <div class="ring-wrap">
+            <div class="score-ring">
+              <span>72%</span>
+            </div>
+          </div>
+          <div class="mini-stats">
+            <div>
+              <small>Best topic</small>
+              <strong>Algebra</strong>
+            </div>
+            <div>
+              <small>Weakest</small>
+              <strong>Vectors</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Passco SHS • Built for Ghanaian SHS learners.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

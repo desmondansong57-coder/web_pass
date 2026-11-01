@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel | Passco SHS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="admin">
+    <div class="admin-lock-screen" id="adminLockScreen" aria-live="polite">
+      <div class="admin-lock-card">
+        <p class="eyebrow">Restricted access</p>
+        <h2>Admin access required</h2>
+        <p>Enter the unlock code to continue.</p>
+        <div class="lock-actions">
+          <input id="adminCodeInput" type="password" placeholder="Enter code" maxlength="4" />
+          <button class="primary-btn" id="unlockAdminBtn" type="button">Unlock</button>
+        </div>
+      </div>
+    </div>
+
+    <header class="topbar admin-header" id="adminHeader">
+      <div class="brand-wrap">
+        <div class="brand-mark">P</div>
+        <div>
+          <p class="eyebrow">WASSCE</p>
+          <h1>Passco SHS</h1>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="practice.html">Practice</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="ghost-btn" id="themeToggle" aria-label="Toggle color theme">Dark mode</button>
+      </div>
+    </header>
+
+    <main class="page-shell" id="adminDashboard" style="display: none;">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Content management</p>
+          <h2>Admin panel</h2>
+        </div>
+      </div>
+
+      <section class="panel admin-panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Question library</p>
+            <h3>Manage assessments</h3>
+          </div>
+          <button class="primary-btn" type="button">Add Question</button>
+        </div>
+
+        <div class="admin-grid">
+          <div class="question-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Topic</th>
+                  <th>Type</th>
+                  <th>Marks</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mathematics</td>
+                  <td>Quadratic Equations</td>
+                  <td>Objective</td>
+                  <td>4</td>
+                  <td><span class="status clean">Live</span></td>
+                </tr>
+                <tr>
+                  <td>English</td>
+                  <td>Comprehension</td>
+                  <td>Theory</td>
+                  <td>10</td>
+                  <td><span class="status review">Review</span></td>
+                </tr>
+                <tr>
+                  <td>Science</td>
+                  <td>Photosynthesis</td>
+                  <td>Objective</td>
+                  <td>5</td>
+                  <td><span class="status clean">Live</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <form class="admin-form">
+            <label>
+              Subject
+              <input type="text" value="Core Mathematics" />
+            </label>
+            <label>
+              Topic
+              <input type="text" value="Vectors and Geometry" />
+            </label>
+            <label>
+              Difficulty
+              <select>
+                <option>Easy</option>
+                <option selected>Medium</option>
+                <option>Hard</option>
+              </select>
+            </label>
+            <label>
+              Question Type
+              <select>
+                <option>Objective</option>
+                <option>Theory</option>
+              </select>
+            </label>
+            <button type="button" class="primary-btn">Save Question</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Passco SHS • Built for Ghanaian SHS learners.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

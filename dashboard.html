@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Passco SHS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="dashboard">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">P</div>
+        <div>
+          <p class="eyebrow">WASSCE</p>
+          <h1>Passco SHS</h1>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="practice.html">Practice</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="ghost-btn" id="themeToggle" aria-label="Toggle color theme">Dark mode</button>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Performance</p>
+          <h2>Student dashboard</h2>
+        </div>
+      </div>
+
+      <section class="panel dashboard-panel">
+        <div class="stats-grid">
+          <article class="stat-card success">
+            <span>Overall score</span>
+            <strong>81%</strong>
+            <small>Avg. WASSCE grade B2</small>
+          </article>
+          <article class="stat-card warning">
+            <span>Accuracy</span>
+            <strong>74%</strong>
+            <small>Across 4 subjects</small>
+          </article>
+          <article class="stat-card info">
+            <span>Weakest topic</span>
+            <strong>Vectors</strong>
+            <small>Needs revision</small>
+          </article>
+          <article class="stat-card neutral">
+            <span>Study streak</span>
+            <strong>9 days</strong>
+            <small>Consistent practice</small>
+          </article>
+        </div>
+
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h4>Score history</h4>
+            <div class="chart-bars" aria-label="Score history">
+              <span style="height: 40%"></span>
+              <span style="height: 52%"></span>
+              <span style="height: 64%"></span>
+              <span style="height: 70%"></span>
+              <span style="height: 83%"></span>
+              <span style="height: 90%"></span>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <h4>Topic accuracy</h4>
+            <ul class="topic-list">
+              <li><span>Algebra</span><strong>90%</strong></li>
+              <li><span>Trigonometry</span><strong>84%</strong></li>
+              <li><span>Statistics</span><strong>77%</strong></li>
+              <li><span>Vectors</span><strong>58%</strong></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Passco SHS • Built for Ghanaian SHS learners.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
